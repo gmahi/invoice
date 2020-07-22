@@ -1,4 +1,5 @@
 <mvc:View
+controllerName="search.Invoice.controller.App"
    xmlns="sap.m"            
    xmlns:mvc="sap.ui.core.mvc"
     xmlns:html="http://www.w3.org/1999/xhtml">  
