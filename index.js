@@ -1,7 +1,13 @@
-sap.ui.define([
+sap.ui.define(["sap/ui/core/mvc/XMLView"
 
-], function () {
+], function (XMLView) {
 	"use strict";
 
-	alert("I am loaded");
+	XMLView.create({
+		viewName: "search.Invoice.view.App"
+
+	}).then(function (oView) {
+		oView.placeAt("content");
+	});
+
 });
