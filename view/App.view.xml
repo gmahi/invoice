@@ -1,8 +1,8 @@
 <mvc:View controllerName="search.Invoice.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
-	<Input placeholder="Invoice Type" value="{/invInput/invType}" description="Invoice Type is {/invInput/invType} " valueLiveUpdate="true"/>
-	<Input placeholder="Invoice Number" value="{/invInput/invNumber}" description="Entered Invoice Number is {/invInput/invNumber}"
+	<Input placeholder="{i18n>invType}" value="{/invInput/invType}" description="{i18n>invType} is {/invInput/invType} " valueLiveUpdate="true"/>
+	<Input placeholder="{i18n>invNumber}" value="{/invInput/invNumber}" description="Entered {i18n>invNumber} is {/invInput/invNumber}"
 		valueLiveUpdate="true"/>
-	<Input placeholder="Company Code" value="{/invInput/invCompanyCode}" description="Company Code is {/invInput/invCompanyCode} "
-		valueLiveUpdate="true"/>
+	<Input placeholder="{i18n>invCompanyCode}" value="{/invInput/invCompanyCode}"
+		description="{i18n>invCompanyCode} is {/invInput/invCompanyCode} " valueLiveUpdate="true"/>
 	<Button text="Search" press=".onSearchInvoices"/>
 </mvc:View>
