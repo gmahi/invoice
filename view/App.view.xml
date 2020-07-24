@@ -1,16 +1,8 @@
-<mvc:View
-controllerName="search.Invoice.controller.App"
-   xmlns="sap.m"            
-   xmlns:mvc="sap.ui.core.mvc"
-    xmlns:html="http://www.w3.org/1999/xhtml">  
-      <html:style>
-      .bluetext {
-         color: blue;
-      }
-   </html:style>
-   <Text class="bluetext" text="Invoice Report"/>
-    <Input placeholder="Invoice Type"/>
-   <Input placeholder="Invoice Number"/>
-   <Input placeholder="Company Code"/>
-   <Button text='Search Invoice'  press='.onSearchInvoice'/>
+<mvc:View controllerName="search.Invoice.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+	<Input placeholder="Invoice Type" value="{/invInput/invType}" description="Invoice Type is {/invInput/invType} " valueLiveUpdate="true"/>
+	<Input placeholder="Invoice Number" value="{/invInput/invNumber}" description="Entered Invoice Number is {/invInput/invNumber}"
+		valueLiveUpdate="true"/>
+	<Input placeholder="Company Code" value="{/invInput/invCompanyCode}" description="Company Code is {/invInput/invCompanyCode} "
+		valueLiveUpdate="true"/>
+	<Button text="Search" press=".onSearchInvoices"/>
 </mvc:View>
