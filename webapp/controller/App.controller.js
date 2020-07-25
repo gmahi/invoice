@@ -6,12 +6,6 @@ sap.ui.define([
 ], function (Controller, MessageToast, JSONModel, ResourceModel) {
 	"use strict";
 	return Controller.extend("search.Invoice.controller.App", {
-		onInit: function () {
 
-		},
-		onSearchInvoices: function () {
-
-			MessageToast.show("Searching Invoice's");
-		}
 	});
 });

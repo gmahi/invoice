@@ -10,7 +10,7 @@
 		data-sap-ui-libs="sap.m"
 		data-sap-ui-compatVersion="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-onInit="module:search/Invoice/index"
+		data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
 		data-sap-ui-resourceroots='{
 			"search.Invoice": "./"
 		}'>
@@ -18,6 +18,6 @@
     </script>
 </head>
 <body class="SapUiBody" id='content'>
-	
+	<div data-sap-ui-component data-name = "search.Invoice" data-id="container" data-settings='{"id":"walkthrough"}'></div>
 </body>
 </html>

@@ -1,0 +1,18 @@
+<mvc:View controllerName="search.Invoice.controller.Invoice" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+	<Shell>
+		<App>
+			<pages>
+				<Page title='{i18n>homePageTitle}'>
+					<content>
+						<Input placeholder="{i18n>invType}" value="{/invInput/invType}" description="{i18n>invType} is {/invInput/invType} " valueLiveUpdate="true"/>
+						<Input class="sapUiResponsiveMargin" placeholder="{i18n>invNumber}" value="{/invInput/invNumber}"
+							description="Entered {i18n>invNumber} is {/invInput/invNumber}" valueLiveUpdate="true"/>
+						<Input class="sapUiResponsiveMargin" placeholder="{i18n>invCompanyCode}" value="{/invInput/invCompanyCode}"
+							description="{i18n>invCompanyCode} is {/invInput/invCompanyCode} " valueLiveUpdate="true"/>
+						<Button class="sapUiResponsiveMargin" text="Search" press=".onSearchInvoices"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

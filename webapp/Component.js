@@ -5,13 +5,7 @@
  	"use strict";
  	return UIComponent.extend("search.Invoice.Component", {
  		metadata: {
- 			rootView: {
- 				"viewName": "search.Invoice.view.App",
- 				"type": 'XML',
- 				"async": true,
- 				"id": "app"
-
- 			}
+ 			manifest:"json"
 
  		},
 
@@ -29,11 +23,8 @@
 
  			var oModel = new JSONModel(invInput);
  			this.setModel(oModel);
- 			var i18nModel = new ResourceModel({
- 				bundleName: "search.Invoice.i18n.i18n"
- 			});
 
- 			this.setModel(i18nModel, 'i18n');
+ 		
  		}
 
  	});

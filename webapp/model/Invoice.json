@@ -1,0 +1,40 @@
+{
+  "Invoices": [
+	{
+	  "Vbeln": "1",
+	  "Type":"NB",
+	  "Bukrs":1000,
+	  "Amount": 100,
+	  "InvDate": "2020-06-23T00:00:00",
+	  "InvStatus": "CONF",
+	  "Waers":"INR"
+	},
+	{
+	  "Vbeln": "2",
+	  "Type":"NB",
+	  "Bukrs":2000,
+	  "Amount": 200,
+	  "InvDate": "2020-06-21T00:00:00",
+	  "InvStatus": "CONF",
+	  "Waers":"INR"
+	},
+		{
+	  "Vbeln": "3",
+	  "Type":"NB",
+	  "Bukrs":3000,
+	  "Amount": 300,
+	  "InvDate": "2020-06-13T00:00:00",
+	  "InvStatus": "OPEN",
+	  "Waers":"INR"
+	},
+		{
+	  "Vbeln": "4",
+	  "Type":"NB",
+	  "Bukrs":4000,
+	  "Amount": 400,
+	  "InvDate": "2020-06-12T00:00:00",
+	  "InvStatus": "PEND",
+	  "Waers":"INR"
+	}
+  ]
+}
