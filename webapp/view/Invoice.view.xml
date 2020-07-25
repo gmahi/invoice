@@ -10,6 +10,12 @@
 						<Input class="sapUiResponsiveMargin" placeholder="{i18n>invCompanyCode}" value="{/invInput/invCompanyCode}"
 							description="{i18n>invCompanyCode} is {/invInput/invCompanyCode} " valueLiveUpdate="true"/>
 						<Button class="sapUiResponsiveMargin" text="Search" press=".onSearchInvoices"/>
+						<List headerText='{i18n>invoiceList}' class="sapUIResponsiveMargin" width="auto" items="{inv>/Invoices}">
+							<items>
+								<ObjectListItem title="{inv>Vbeln}-{inv>Bukrs}"
+									number="{ parts:[{path: 'inv>Amount'}, {path:'inv>/Waers'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"/>
+							</items>
+						</List>
 					</content>
 				</Page>
 			</pages>

@@ -41,7 +41,7 @@
 			"inv": {
 				"type": "sap.ui.model.json.JSONModel",
 				"settings": {},
-				"uri": "model.Invoice.json",
+				"uri": "model/Invoice.json",
 				"preload": false
 			}
 		},
