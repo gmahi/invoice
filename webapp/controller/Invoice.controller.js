@@ -1,9 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
-	"../model/formatter"
+	"../model/formatter",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
 
-], function (Controller, MessageToast, formatter) {
+], function (Controller, MessageToast, formatter, Filter, FilterOperator) {
 	"use strict";
 	return Controller.extend("search.Invoice.controller.App", {
 		formatter: formatter,
@@ -14,6 +16,28 @@ sap.ui.define([
 			var oBundle = this.getView().getModel('i18n').getResourceBundle();
 
 			MessageToast.show(oBundle.getText("searchInvoice"));
+			//build Filter Array
+			var aFilter = [];
+			let inputData = JSON.parse(this.getView().getModel().getJSON()).invInput;
+			if (inputData.invCompanyCode) {
+				aFilter.push(new Filter("Bukrs", FilterOperator.Contains, inputData.invCompanyCode));
+			}
+			if (inputData.plant) {
+				aFilter.push(new Filter("Plant", FilterOperator.Contains, inputData.plant));
+			}
+			if (inputData.invNumber) {
+				aFilter.push(new Filter("Vbeln", FilterOperator.Contains, inputData.invNumber));
+			}
+
+			if (inputData.invType) {
+				aFilter.push(new Filter("Type", FilterOperator.Contains, inputData.invType));
+			}
+
+			//filter binding
+			var oList = this.byId("invList");
+			var oBinding = oList.getBinding('items');
+			oBinding.filter(aFilter);
+
 		}
 	});
 });

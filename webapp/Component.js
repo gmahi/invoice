@@ -17,7 +17,8 @@
  				invInput: {
  					invNumber: "",
  					invType: "",
- 					invCompanyCode: ""
+ 					invCompanyCode: "",
+ 					plant:""
  				}
  			};
 
