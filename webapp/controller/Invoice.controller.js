@@ -1,10 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast"
+	"sap/m/MessageToast",
+	"../model/formatter"
 
-], function (Controller, MessageToast) {
+], function (Controller, MessageToast, formatter) {
 	"use strict";
 	return Controller.extend("search.Invoice.controller.App", {
+		formatter: formatter,
 		onInit: function () {
 
 		},

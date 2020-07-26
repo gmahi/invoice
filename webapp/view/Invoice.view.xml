@@ -14,7 +14,12 @@
 							<items>
 								<ObjectListItem title="{inv>Vbeln}-{inv>Bukrs}"
 									number="{ parts:[{path: 'inv>Amount'}, {path:'inv>/Waers'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"
-									numberUnit="{inv>Waers}" numberState="{= ${inv>Amount}>120 ? 'Error' : 'Success'}"/>
+									numberUnit="{inv>Waers}" numberState="{= ${inv>Amount}>120 ? 'Error' : 'Success'}">
+									<ObjectAttribute text="{path:'inv>InvStatus', formatter:'.formatter.readbleInvStatus' }"/>
+									<markers>
+										<ObjectMarker type="{= ${inv>InvStatus} === 'CONF' ? 'Favorite' :'Flagged'}"/>
+									</markers>
+								</ObjectListItem>
 							</items>
 						</List>
 					</content>
