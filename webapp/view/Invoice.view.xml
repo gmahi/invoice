@@ -30,6 +30,12 @@
 									</firstStatus>
 								</ObjectListItem>
 							</items>
+							<headerToolbar>
+								<OverflowToolbar>
+									<Button text="Sort by Company Code" press=".handleSortPress"/>
+									<Button text="Group by Company Code" press=".handleGroupPress"/>
+								</OverflowToolbar>
+							</headerToolbar>
 						</List>
 					</content>
 				</Page>

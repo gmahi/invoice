@@ -38,6 +38,22 @@ sap.ui.define([
 			var oBinding = oList.getBinding('items');
 			oBinding.filter(aFilter);
 
+		},
+
+		handleSortPress: function () {
+			var oList = this.byId("invList");
+			var oBinding = oList.getBinding("items");
+			var aSorter = [];
+			aSorter.push(new sap.ui.model.Sorter("Bukrs", false, false));
+			oBinding.sort(aSorter);
+		},
+		handleGroupPress: function () {
+			var oList = this.byId("invList");
+			var oBinding = oList.getBinding("items");
+			var aSorter = [];
+			aSorter.push(new sap.ui.model.Sorter("Bukrs", false, true));
+			oBinding.sort(aSorter);
 		}
+
 	});
 });
