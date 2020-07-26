@@ -10,11 +10,11 @@
 							description="Entered {i18n>invNumber} is {/invInput/invNumber}" valueLiveUpdate="true"/>
 						<Input class="sapUiResponsiveMargin" placeholder="{i18n>invCompanyCode}" value="{/invInput/invCompanyCode}"
 							description="{i18n>invCompanyCode} is {/invInput/invCompanyCode} " valueLiveUpdate="true"/>
-						<Input class="sapUiResponsiveMargin" placeholder="{i18n>plant}" value="{/invInput/plant}"
-							description="{i18n>plant} is {/invInput/plant} " valueLiveUpdate="true"/>	
-							
+						<Input class="sapUiResponsiveMargin" placeholder="{i18n>plant}" value="{/invInput/plant}" description="{i18n>plant} is {/invInput/plant} "
+							valueLiveUpdate="true"/>
 						<Button class="sapUiResponsiveMargin" text="Search" press=".onSearchInvoices"/>
-						<List id='invList' headerText='{i18n>invoiceList}' class="sapUIResponsiveMargin" width="auto" items="{inv>/Invoices}">
+						<List id='invList' headerText='{i18n>invoiceList}' class="sapUIResponsiveMargin" width="auto"
+							items="{path: 'inv>/Invoices', sorter: { path:'Plant', group:true } }">
 							<items>
 								<ObjectListItem title="{inv>Vbeln}-{inv>Matnr}"
 									number="{ parts:[{path: 'inv>Amount'}, {path:'inv>/Waers'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"
