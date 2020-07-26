@@ -1,40 +1,47 @@
 {
-  "Invoices": [
-	{
-	  "Vbeln": "1",
-	  "Type":"NB",
-	  "Bukrs":1000,
-	  "Amount": 100,
-	  "InvDate": "2020-06-23T00:00:00",
-	  "InvStatus": "CONF",
-	  "Waers":"INR"
-	},
-	{
-	  "Vbeln": "2",
-	  "Type":"NB",
-	  "Bukrs":2000,
-	  "Amount": 200,
-	  "InvDate": "2020-06-21T00:00:00",
-	  "InvStatus": "CONF",
-	  "Waers":"INR"
-	},
-		{
-	  "Vbeln": "3",
-	  "Type":"NB",
-	  "Bukrs":3000,
-	  "Amount": 300,
-	  "InvDate": "2020-06-13T00:00:00",
-	  "InvStatus": "OPEN",
-	  "Waers":"INR"
-	},
-		{
-	  "Vbeln": "4",
-	  "Type":"NB",
-	  "Bukrs":4000,
-	  "Amount": 400,
-	  "InvDate": "2020-06-12T00:00:00",
-	  "InvStatus": "PEND",
-	  "Waers":"INR"
-	}
-  ]
+	"Invoices": [{
+		"Vbeln": "1",
+		"Menge": 98,
+		"Amount": 100,
+		"Matnr": "MAT1",
+		"InvDate": "2020-06-23T00:00:00",
+		"InvStatus": "CONF",
+		"Waers": "INR",
+		"Plant": "DE01",
+		"Bukrs": "1000",
+		"Type": "NB"
+	}, {
+		"Vbeln": "2",
+		"Menge": 321,
+		"Amount": 9872,
+		"Matnr": "MAT2",
+		"InvDate": "2020-06-21T00:00:00",
+		"InvStatus": "CONF",
+		"Waers": "INR",
+		"Plant": "DE01",
+		"Bukrs": "1000",
+		"Type": "NB"
+	}, {
+		"Vbeln": "3",
+		"Menge": 108,
+		"Amount": 120,
+		"Matnr": "MAT3",
+		"InvDate": "2020-06-13T00:00:00",
+		"InvStatus": "OPEN",
+		"Waers": "INR",
+		"Plant": "DE02",
+		"Bukrs": "2000",
+		"Type": "BN"
+	}, {
+		"Vbeln": "4",
+		"Menge": 789,
+		"Amount": 1200,
+		"Matnr": "MAT4",
+		"InvDate": "2020-06-12T00:00:00",
+		"InvStatus": "PEND",
+		"Waers": "INR",
+		"Plant": "DE02",
+		"Bukrs": "2000",
+		"Type": "BN"
+	}]
 }
