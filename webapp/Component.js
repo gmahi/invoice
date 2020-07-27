@@ -5,7 +5,7 @@
  	"use strict";
  	return UIComponent.extend("search.Invoice.Component", {
  		metadata: {
- 			manifest:"json"
+ 			manifest: "json"
 
  		},
 
@@ -18,14 +18,14 @@
  					invNumber: "",
  					invType: "",
  					invCompanyCode: "",
- 					plant:""
+ 					plant: ""
  				}
  			};
 
  			var oModel = new JSONModel(invInput);
  			this.setModel(oModel);
+ 			this.getRouter().initialize();
 
- 		
  		}
 
  	});

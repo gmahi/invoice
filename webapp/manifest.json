@@ -49,6 +49,37 @@
 			"compact": false,
 			"cozy": false
 		},
-		"flexEnabled": true
+		
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "search.Invoice.view",
+				"viewType":"XML",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [{
+				"name": "invhome",
+				"pattern": "",
+				"target": "invhome"
+				
+			}, {
+				"name": "invdetail",
+				"pattern": "invdetail",
+				"target": "invdetail"
+				
+			}],
+			"targets": {
+				"invhome": {
+					"viewName": "Invoice",
+					"viewid"   :"invhome"
+				},
+				"invdetail": {
+					"viewName": "Invdetail",
+					"viewId": "invdetail"
+				}
+			}
+		}
 	}
 }

@@ -53,6 +53,11 @@ sap.ui.define([
 			var aSorter = [];
 			aSorter.push(new sap.ui.model.Sorter("Bukrs", false, true));
 			oBinding.sort(aSorter);
+		},
+
+		showDetail: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("invdetail");
 		}
 
 	});
