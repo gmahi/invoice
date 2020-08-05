@@ -57,7 +57,11 @@
 				"viewType": "XML",
 				"controlId": "app",
 				"controlAggregation": "pages",
-				"async": true
+				"async": true,
+				"bypassed": {
+					"target": "invalidRoute"
+
+				}
 			},
 			"routes": [{
 				"pattern": "",
@@ -76,6 +80,11 @@
 				"invdetail": {
 					"viewId": "Invdetail",
 					"viewName": "Invdetail"
+				},
+				"invalidRoute": {
+					"viewId": "Invalid",
+					"viewName": "Invalid",
+					"transition": "show"
 				}
 			}
 		}
