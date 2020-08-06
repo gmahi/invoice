@@ -25,6 +25,15 @@
  			var oModel = new JSONModel(invInput);
  			this.setModel(oModel);
  			this.getRouter().initialize();
+ 			this.getRouter().attachBypassed(function (oEvent) {
+ 				var sHash = oEvent.getParameter("hash");
+ 				console.log("Hash " + sHash + " is invalid.");
+ 			});
+
+ 			this.getRouter().attachRouteMatched(function (oEvent) {
+ 				var sRouteName = oEvent.getParameter("name");
+ 				console.log("Route " + sRouteName + " is valid.");
+ 			});
 
  		}
 

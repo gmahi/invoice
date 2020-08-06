@@ -1,8 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"search/Invoice/controller/BaseController"
+], function (BaseController) {
 	"use strict";
-	return Controller.extend("search.Invoice.controller.Invalid", {
+	return BaseController.extend("search.Invoice.controller.Invalid", {
 		onInit: function () {}
 	});
 });
