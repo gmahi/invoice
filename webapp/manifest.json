@@ -70,7 +70,7 @@
 			}, {
 				"pattern": "invdetail/{invoicePath}",
 				"name": "invdetail",
-				"target": "invdetail"
+				"target": ["invdetail1", "invdetail2"]
 			}],
 			"targets": {
 				"invoice": {
@@ -81,6 +81,24 @@
 					"viewId": "Invdetail",
 					"viewName": "Invdetail"
 				},
+				"invdetail1": {
+					"viewId": "Invdetail1",
+					"parent": "invdetail",
+					"viewPath": "search.Invoice.view",
+					"viewName": "Invdetail1",
+					"controlId": "InvDetailParent",
+					"controlAggregation": "content"
+				},
+
+				"invdetail2": {
+					"viewId": "Invdetail2",
+					"parent": "invdetail",
+					"viewPath": "search.Invoice.view",
+					"viewName": "Invdetail2",
+					"controlId": "InvDetailParent",
+					"controlAggregation": "content"
+				},
+
 				"invalidRoute": {
 					"viewId": "Invalid",
 					"viewName": "Invalid",
